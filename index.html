@@ -3,133 +3,157 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>DITTHTZY STORE</title>
+  <title>QRIS Payment - ditthtzy</title>
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
-
     body {
-      margin: 0;
-      background-color: #000;
-      color: #00ff99;
-      font-family: 'Share Tech Mono', monospace;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      min-height: 100vh;
-      padding: 30px 15px;
-      background-image: linear-gradient(to bottom, #000000 0%, #003300 100%);
-      animation: matrixScroll 10s linear infinite;
+      background-color: #0f172a;
     }
-
-    @keyframes matrixScroll {
-      0% { background-position: 0 0; }
-      100% { background-position: 0 1000px; }
+    .fade-in-up {
+      opacity: 0;
+      transform: translateY(40px) scale(0.98);
+      animation: fadeInUp 0.8s ease-out forwards;
+      animation-delay: 1s;
     }
-
-    h1 {
-      text-align: center;
-      font-size: 2em;
-      margin-bottom: 10px;
-      color: #00ffcc;
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
     }
-
-    .thumbnail {
-      width: 180px;
-      height: 180px;
-      border-radius: 12px;
-      margin: 20px 0;
-      box-shadow: 0 0 20px #00ff99;
+    .intro-text {
+      animation: zoomFade 1.3s ease-in-out forwards;
     }
-
-    .section {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      width: 100%;
-      max-width: 300px;
-      margin-bottom: 30px;
-    }
-
-    button {
-      background-color: #00ff99;
-      color: black;
-      border: none;
-      padding: 12px;
-      font-weight: bold;
-      border-radius: 8px;
-      cursor: pointer;
-      font-family: inherit;
-      box-shadow: 0 0 10px #00ff99;
-      transition: transform 0.2s;
-    }
-
-    button:hover {
-      transform: scale(1.05);
-    }
-
-    .note {
-      margin-top: 15px;
-      font-size: 0.9em;
-      color: #ccc;
-      text-align: center;
-    }
-
-    .price-tag {
-      text-align: center;
-      font-size: 0.85em;
-      color: #66ffcc;
-      margin-top: -6px;
-      margin-bottom: 8px;
-    }
-
-    hr {
-      border: none;
-      height: 1px;
-      background: #004400;
-      margin: 25px 0;
-      width: 80%;
+    @keyframes zoomFade {
+      0% {
+        opacity: 0;
+        transform: scale(0.5) translateY(-100px);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+      }
     }
   </style>
 </head>
-<body>
+<body class="text-white overflow-x-hidden">
 
-  <h1>💸 Ditthtzy Store</h1>
-  <img src="https://files.catbox.moe/l7w2pe.jpg" alt="Thumbnail" class="thumbnail" />
-
-  <!-- SECTION: Pembayaran -->
-  <div class="section">
-    <button onclick="window.open('https://files.catbox.moe/7nxsmu.png', '_blank')">🔗 QRIS</button>
-    <button onclick="window.open('https://link.dana.id/088272044089', '_blank')">📱 Dana: 085167183226</button>
-    <button onclick="window.open('https://gopay.link/088272044089', '_blank')">📱 Gopay: 085167183226</button>
-  </div>
-  <div class="note">Atas Nama: <strong>S U M</strong></div>
-
-  <!-- SECTION: Dukungan -->
-  <hr />
-  <div class="section">
-    <button onclick="alert('Support by: Ditthtzy')">❤️ Support: Ditthtzy</button>
-    <button onclick="alert('Support by: Xatanical')">💖 Support: Xatanical</button>
+  <!-- Animasi Teks -->
+  <div class="fixed top-10 w-full flex justify-center z-50 pointer-events-none">
+    <h1 class="text-4xl md:text-5xl font-extrabold text-blue-500 intro-text">
+      ditth is here 🚀
+    </h1>
   </div>
 
-  <!-- SECTION: Produk/Jasa -->
-  <hr />
-  <div class="section">
-    <button>Partner Ditthtzy</button>
-    <div class="price-tag">Mulai Rp50.000</div>
+  <!-- Navbar -->
+  <nav class="bg-gray-900 shadow-md mt-24">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold text-blue-400">ditthtzy</h1>
+      <ul class="hidden md:flex space-x-6 text-sm">
+        <li><a href="#home" class="hover:text-blue-400">Home</a></li>
+        <li><a href="#produk" class="hover:text-blue-400">Produk</a></li>
+        <li><a href="#bayar" class="hover:text-blue-400">Pembayaran</a></li>
+        <li><a href="https://t.me/ditthtzy" target="_blank" class="hover:text-blue-400">Hubungi Saya</a></li>
+      </ul>
+    </div>
+  </nav>
 
-    <button>Telegram Bot Tredict Invictus</button>
-    <div class="price-tag">Rp100.000</div>
+  <!-- Produk Section -->
+  <section id="produk" class="py-16 px-6 max-w-7xl mx-auto">
+    <h2 class="text-3xl font-bold text-center text-blue-400 mb-10">🛒 Menu Penjualan</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      <!-- Partner -->
+      <div class="bg-gray-800 rounded-xl p-6 text-center shadow-md hover:scale-105 transition">
+        <h3 class="text-xl font-bold text-white mb-2">Partner ditthtzy</h3>
+        <p class="text-gray-300 mb-4">Jadi bagian dari tim dengan dukungan dasar.</p>
+        <div class="text-2xl font-bold text-blue-400 mb-4">Rp 50.000</div>
+        <a href="https://t.me/ditthtzy" target="_blank" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg font-semibold">
+          Beli Sekarang
+        </a>
+      </div>
 
-    <button>Tangan kanan Ditthtzh</button>
-    <div class="price-tag">Rp100.000</div>
+      <!-- Tangan Kanan -->
+      <div class="bg-gray-800 rounded-xl p-6 text-center shadow-md hover:scale-105 transition">
+        <h3 class="text-xl font-bold text-white mb-2">Tangan Kanan ditthtzy</h3>
+        <p class="text-gray-300 mb-4">Akses lebih dalam dan kepercayaan lebih tinggi.</p>
+        <div class="text-2xl font-bold text-blue-400 mb-4">Rp 100.000</div>
+        <a href="https://t.me/ditthtzy" target="_blank" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg font-semibold">
+          Beli Sekarang
+        </a>
+      </div>
 
-    <button>Owner Ditthtzy</button>
-    <div class="price-tag">Rp150.000</div>
+      <!-- Owner -->
+      <div class="bg-gray-800 rounded-xl p-6 text-center shadow-md hover:scale-105 transition">
+        <h3 class="text-xl font-bold text-white mb-2">Owner ditthtzy</h3>
+        <p class="text-gray-300 mb-4">Paket tertinggi, akses penuh dan VIP.</p>
+        <div class="text-2xl font-bold text-blue-400 mb-4">Rp 150.000</div>
+        <a href="https://t.me/ditthtzy" target="_blank" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg font-semibold">
+          Beli Sekarang
+        </a>
+      </div>
 
-    <button>Xmd Invasion</button>
-    <div class="price-tag">Rp20.000</div>
-  </div>
+      <!-- Script Xmd Invasion -->
+      <div class="bg-gray-800 rounded-xl p-6 text-center shadow-md hover:scale-105 transition">
+        <h3 class="text-xl font-bold text-white mb-2">Script Xmd Invasion</h3>
+        <p class="text-gray-300 mb-4">Script bug WhatsApp edisi Xmd ✴️.</p>
+        <div class="text-2xl font-bold text-blue-400 mb-4">Rp 20.000</div>
+        <a href="https://t.me/ditthtzy" target="_blank" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg font-semibold">
+          Beli Sekarang
+        </a>
+      </div>
+
+      <!-- Tredict Invictuse -->
+      <div class="bg-gray-800 rounded-xl p-6 text-center shadow-md hover:scale-105 transition">
+        <h3 class="text-xl font-bold text-white mb-2">Tredict Invictuse</h3>
+        <p class="text-gray-300 mb-4">Tools & script elite dari tim ditthtzy.</p>
+        <div class="text-2xl font-bold text-blue-400 mb-4">Rp 100.000</div>
+        <a href="https://t.me/ditthtzy" target="_blank" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg font-semibold">
+          Beli Sekarang
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- QRIS Payment -->
+  <section id="bayar" class="flex flex-col items-center justify-center min-h-screen px-4">
+    <div class="bg-gray-800 shadow-2xl rounded-2xl p-8 w-full max-w-xl text-center fade-in-up">
+      <h2 class="text-3xl font-bold text-blue-400 mb-2">💳 Pembayaran via QRIS</h2>
+      <p class="text-gray-300 mb-4">Scan kode QR di bawah untuk menyelesaikan pembayaran</p>
+
+      <img
+        src="https://files.catbox.moe/7nxsmu.png"
+        alt="QRIS Code"
+        class="mx-auto w-60 h-60 rounded-lg border-4 border-blue-500 mb-6"
+      />
+
+      <div class="text-left text-gray-400 text-sm mb-4">
+        <p><strong>Nama:</strong> ditthtzy Store</p>
+        <p><strong>Metode:</strong> QRIS (semua e-wallet & bank)</p>
+        <p><strong>No. DANA / GoPay / OVO:</strong> 085167183226</p>
+      </div>
+
+      <!-- Logo e-wallet -->
+      <div class="flex justify-center gap-6 mb-6">
+        <img src="https://i.imgur.com/dL3O6U1.png" alt="Dana" class="w-12 h-12" />
+        <img src="https://i.imgur.com/zv2kaeH.png" alt="OVO" class="w-12 h-12" />
+        <img src="https://i.imgur.com/JVnBMqf.png" alt="GoPay" class="w-12 h-12" />
+        <img src="https://files.catbox.moe/7nxsmu.png" alt="QRIS" class="w-12 h-12 rounded" />
+      </div>
+
+      <a
+        href="https://t.me/ditthtzy"
+        target="_blank"
+        class="w-full inline-block py-3 bg-blue-600 hover:bg-blue-700 rounded-xl font-bold transition"
+      >
+        Saya Sudah Bayar - Hubungi Admin
+      </a>
+
+      <p class="text-xs text-gray-500 mt-6 italic">
+        Powered by ditthtzy |
+        <a href="https://t.me/ditthtzy" target="_blank" class="text-blue-400 hover:underline">@ditthtzy</a>
+      </p>
+    </div>
+  </section>
 
 </body>
 </html>
