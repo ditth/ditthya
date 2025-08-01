@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DITTHTZY STORE</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+    body {
+      margin: 0;
+      background-color: #000;
+      color: #00ff99;
+      font-family: 'Share Tech Mono', monospace;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      padding: 30px 15px;
+      background-image: linear-gradient(to bottom, #000000 0%, #003300 100%);
+      animation: matrixScroll 10s linear infinite;
+    }
+
+    @keyframes matrixScroll {
+      0% { background-position: 0 0; }
+      100% { background-position: 0 1000px; }
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 10px;
+      color: #00ffcc;
+    }
+
+    .thumbnail {
+      width: 180px;
+      height: 180px;
+      border-radius: 12px;
+      margin: 20px 0;
+      box-shadow: 0 0 20px #00ff99;
+    }
+
+    .section {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+      max-width: 300px;
+      margin-bottom: 30px;
+    }
+
+    button {
+      background-color: #00ff99;
+      color: black;
+      border: none;
+      padding: 12px;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      font-family: inherit;
+      box-shadow: 0 0 10px #00ff99;
+      transition: transform 0.2s;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+    }
+
+    .note {
+      margin-top: 15px;
+      font-size: 0.9em;
+      color: #ccc;
+      text-align: center;
+    }
+
+    .price-tag {
+      text-align: center;
+      font-size: 0.85em;
+      color: #66ffcc;
+      margin-top: -6px;
+      margin-bottom: 8px;
+    }
+
+    hr {
+      border: none;
+      height: 1px;
+      background: #004400;
+      margin: 25px 0;
+      width: 80%;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>💸 Ditthtzy Store</h1>
+  <img src="https://files.catbox.moe/l7w2pe.png" alt="Thumbnail" class="thumbnail" />
+
+  <!-- SECTION: Pembayaran -->
+  <div class="section">
+    <button onclick="window.open('https://files.catbox.moe/7nxsmu.png', '_blank')">🔗 QRIS</button>
+    <button onclick="window.open('https://link.dana.id/088272044089', '_blank')">📱 Dana: 085167183226</button>
+    <button onclick="window.open('https://gopay.link/088272044089', '_blank')">📱 Gopay: 085167183226</button>
+  </div>
+  <div class="note">Atas Nama: <strong>M A W</strong></div>
+
+  <!-- SECTION: Dukungan -->
+  <hr />
+  <div class="section">
+    <button onclick="alert('Support by: Ditthtzy')">❤️ Support: Ditthtzy</button>
+    <button onclick="alert('Support by: Xatanical')">💖 Support: Xatanical</button>
+  </div>
+
+  <!-- SECTION: Produk/Jasa -->
+  <hr />
+  <div class="section">
+    <button>Partner Ditthtzy</button>
+    <div class="price-tag">Mulai Rp50.000</div>
+
+    <button>Telegram Bot Tredict Invictus</button>
+    <div class="price-tag">Rp100.000</div>
+
+    <button>Tangan kanan Ditthtzh</button>
+    <div class="price-tag">Rp100.000</div>
+
+    <button>Owner Ditthtzy</button>
+    <div class="price-tag">Rp150.000</div>
+
+    <button>Xmd Invasion</button>
+    <div class="price-tag">Rp20.000</div>
+  </div>
+
+</body>
+</html>
