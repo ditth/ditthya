@@ -1,74 +1,68 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pembayaran - ditthtzy</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body {
-      background-color: #0f172a;
-    }
-    .fade-in-up {
-      opacity: 0;
-      transform: translateY(40px) scale(0.98);
-      animation: fadeInUp 0.8s ease-out forwards;
-      animation-delay: 1s;
-    }
-    @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-      }
-    }
-    .intro-text {
-      animation: zoomFade 1.3s ease-in-out forwards;
-    }
-    @keyframes zoomFade {
-      0% {
-        opacity: 0;
-        transform: scale(0.5) translateY(-100px);
-      }
-      100% {
-        opacity: 1;
-        transform: scale(1) translateY(0);
-      }
+      background-color: #0f0f0f;
+      color: #f1f1f1;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
   </style>
 </head>
-<body class="text-white overflow-x-hidden">
+<body class="min-h-screen flex flex-col items-center justify-center p-6">
 
-  <!-- Judul -->
-  <div class="fixed top-10 w-full flex justify-center z-50 pointer-events-none">
-    <h1 class="text-4xl md:text-5xl font-extrabold text-blue-500 intro-text">
-      ditth is here 🚀
-    </h1>
+  <h1 class="text-3xl font-bold mb-6 text-cyan-400">💳 Halaman Pembayaran</h1>
+
+  <div class="bg-zinc-900 p-6 rounded-2xl shadow-lg w-full max-w-md">
+    <h2 class="text-xl font-semibold mb-4 text-white">QRIS & Dana</h2>
+
+    <div class="mb-4">
+      <p class="text-gray-300">Nomor Dana:</p>
+      <div class="bg-gray-800 p-3 rounded mt-1 select-all text-green-400 font-mono">085167183226 a/n sum</div>
+    </div>
+
+    <div class="mb-4">
+      <p class="text-gray-300">QRIS (Scan Barcode):</p>
+      <img src="https://files.catbox.moe/7nxsmu.png" alt="QRIS Code" class="rounded-xl mt-2 border-2 border-cyan-500">
+    </div>
   </div>
 
-  <!-- Navbar -->
-  <nav class="bg-gray-900 shadow-md mt-24">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-      <h1 class="text-xl font-bold text-blue-400">ditthtzy</h1>
-      <ul class="hidden md:flex space-x-6 text-sm">
-        <li><a href="#home" class="hover:text-blue-400">Home</a></li>
-        <li><a href="#produk" class="hover:text-blue-400">Produk</a></li>
-        <li><a href="#bayar" class="hover:text-blue-400">Pembayaran</a></li>
-        <li><a href="https://t.me/ditthtzy" target="_blank" class="hover:text-blue-400">Hubungi Saya</a></li>
-      </ul>
-    </div>
-  </nav>
+  <div class="mt-10 w-full max-w-md bg-zinc-900 p-6 rounded-2xl shadow-lg">
+    <h2 class="text-xl font-semibold mb-4 text-white">📦 Menu Penjualan</h2>
+    <ul class="space-y-4 text-gray-300">
+      <li>
+        <p>🔹 <span class="text-white font-semibold">Xmd Invasion</span> - <span class="text-green-400">Rp 20.000</span></p>
+        <p class="text-sm text-gray-400 ml-4">Script bug yang di rancang untuk membasmi para jamet banyak gaya.</p>
+      </li>
+      <li>
+        <p>🔹 <span class="text-white font-semibold">Tredict Invictuse</span> - <span class="text-green-400">Rp 100.000</span></p>
+        <p class="text-sm text-gray-400 ml-4">Script bug yang di rancang untuk membasmi para penipu.</p>
+      </li>
+      <li>
+        <p>🔹 <span class="text-white font-semibold">Partner</span> - <span class="text-yellow-400">Rp 50.000</span></p>
+        <p class="text-sm text-gray-400 ml-4">Akses grup Ditth & diskusi fitur serta akses 1x tools premium.</p>
+      </li>
+      <li>
+        <p>🔹 <span class="text-white font-semibold">Tangan Kanan</span> - <span class="text-orange-400">Rp 100.000</span></p>
+        <p class="text-sm text-gray-400 ml-4">Akses ke semua fitur + bantuan langsung dari team support.</p>
+      </li>
+      <li>
+        <p>🔹 <span class="text-white font-semibold">Owner</span> - <span class="text-red-500">Rp 150.000</span></p>
+        <p class="text-sm text-gray-400 ml-4">Full akses, source code lengkap, dan status admin di grup Ditth.</p>
+      </li>
+    </ul>
+  </div>
 
-  <!-- Produk -->
-  <section id="produk" class="py-16 px-6 max-w-7xl mx-auto">
-    <h2 class="text-3xl font-bold text-center text-blue-400 mb-10">🛒 Menu Penjualan</h2>
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-      <!-- Item 1 -->
-      <div class="bg-gray-800 rounded-xl p-6 text-center shadow-md hover:scale-105 transition">
-        <h3 class="text-xl font-bold text-white mb-2">Partner ditthtzy</h3>
-        <p class="text-gray-300 mb-4">Jadi bagian dari tim dengan dukungan dasar.</p>
-        <div class="text-2xl font-bold text-blue-400 mb-4">Rp 50.000</div>
-        <a href="https://t.me/ditthtzy" target="_blank" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg font-semibold">
-          Beli Sekarang
+  <footer class="mt-10 text-gray-500 text-sm">
+    &copy; 2025 ditthtzy. All rights reserved.
+  </footer>
+
+</body>
+</html>          Beli Sekarang
         </a>
       </div>
 
